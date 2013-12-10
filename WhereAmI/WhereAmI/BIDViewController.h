@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface BIDViewController : UIViewController
+@interface BIDViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *startPoint;
+@property (assign, nonatomic) CLLocationDistance distanceFromStart;
+@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *horizontalAccuracyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *altitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *verticalAccuracyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceTraveledLabel;
 
 @end
