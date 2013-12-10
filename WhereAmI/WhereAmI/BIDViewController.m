@@ -7,6 +7,7 @@
 //
 
 #import "BIDViewController.h"
+#import "BIDPlace.h"
 
 @interface BIDViewController ()
 
@@ -23,6 +24,8 @@
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [_locationManager startUpdatingLocation];
+    
+    _mapView.showsUserLocation = YES;
 }
 
 #pragma mark -
@@ -55,6 +58,18 @@
     if (_startPoint == nil) {
         self.startPoint = newLocation;
         self.distanceFromStart = 0;
+        
+        BIDPlace *start = [[BIDPlace alloc] init];
+        start.coordinate = newLocation.coordinate;
+        start.title = @"Start Point";
+        start.subtitle = @"This is where we started";
+        
+        [_mapView addAnnotation:start];
+        MKCoordinateRegion region;
+        region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 100, 100);
+        
+        [_mapView setRegion:region animated:YES];
+        
     } else {
         self.distanceFromStart = [newLocation distanceFromLocation:_startPoint];
     }

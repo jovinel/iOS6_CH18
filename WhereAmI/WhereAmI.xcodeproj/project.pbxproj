@@ -16,7 +16,6 @@
 		472B9A471856DEA6001935B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A461856DEA6001935B2 /* Default.png */; };
 		472B9A491856DEA6001935B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A481856DEA6001935B2 /* Default@2x.png */; };
 		472B9A4B1856DEA6001935B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A4A1856DEA6001935B2 /* Default-568h@2x.png */; };
-		472B9A4E1856DEA6001935B2 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472B9A4D1856DEA6001935B2 /* BIDViewController.m */; };
 		472B9A511856DEA6001935B2 /* BIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A4F1856DEA6001935B2 /* BIDViewController.xib */; };
 		472B9A591856DEA6001935B2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A581856DEA6001935B2 /* SenTestingKit.framework */; };
 		472B9A5A1856DEA6001935B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A341856DEA6001935B2 /* UIKit.framework */; };
@@ -24,6 +23,9 @@
 		472B9A631856DEA6001935B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A611856DEA6001935B2 /* InfoPlist.strings */; };
 		472B9A661856DEA6001935B2 /* WhereAmITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472B9A651856DEA6001935B2 /* WhereAmITests.m */; };
 		472B9A701856E55D001935B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A6F1856E55D001935B2 /* CoreLocation.framework */; };
+		472B9A731856E9B9001935B2 /* BIDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 472B9A721856E9B9001935B2 /* BIDPlace.m */; };
+		472B9A741856EC4F001935B2 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472B9A4D1856DEA6001935B2 /* BIDViewController.m */; };
+		472B9A761856EC87001935B2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A751856EC87001935B2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		472B9A641856DEA6001935B2 /* WhereAmITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereAmITests.h; sourceTree = "<group>"; };
 		472B9A651856DEA6001935B2 /* WhereAmITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereAmITests.m; sourceTree = "<group>"; };
 		472B9A6F1856E55D001935B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		472B9A711856E9B9001935B2 /* BIDPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDPlace.h; sourceTree = "<group>"; };
+		472B9A721856E9B9001935B2 /* BIDPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDPlace.m; sourceTree = "<group>"; };
+		472B9A751856EC87001935B2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472B9A761856EC87001935B2 /* MapKit.framework in Frameworks */,
 				472B9A701856E55D001935B2 /* CoreLocation.framework in Frameworks */,
 				472B9A351856DEA6001935B2 /* UIKit.framework in Frameworks */,
 				472B9A371856DEA6001935B2 /* Foundation.framework in Frameworks */,
@@ -109,6 +115,7 @@
 		472B9A331856DEA6001935B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				472B9A751856EC87001935B2 /* MapKit.framework */,
 				472B9A6F1856E55D001935B2 /* CoreLocation.framework */,
 				472B9A341856DEA6001935B2 /* UIKit.framework */,
 				472B9A361856DEA6001935B2 /* Foundation.framework */,
@@ -126,6 +133,8 @@
 				472B9A4C1856DEA6001935B2 /* BIDViewController.h */,
 				472B9A4D1856DEA6001935B2 /* BIDViewController.m */,
 				472B9A4F1856DEA6001935B2 /* BIDViewController.xib */,
+				472B9A711856E9B9001935B2 /* BIDPlace.h */,
+				472B9A721856E9B9001935B2 /* BIDPlace.m */,
 				472B9A3B1856DEA6001935B2 /* Supporting Files */,
 			);
 			path = WhereAmI;
@@ -275,9 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472B9A741856EC4F001935B2 /* BIDViewController.m in Sources */,
 				472B9A411856DEA6001935B2 /* main.m in Sources */,
 				472B9A451856DEA6001935B2 /* BIDAppDelegate.m in Sources */,
-				472B9A4E1856DEA6001935B2 /* BIDViewController.m in Sources */,
+				472B9A731856E9B9001935B2 /* BIDPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

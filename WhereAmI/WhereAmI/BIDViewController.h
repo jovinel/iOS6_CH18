@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface BIDViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -20,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *altitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *verticalAccuracyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceTraveledLabel;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
