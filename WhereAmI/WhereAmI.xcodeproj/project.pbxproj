@@ -23,6 +23,7 @@
 		472B9A5B1856DEA6001935B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A361856DEA6001935B2 /* Foundation.framework */; };
 		472B9A631856DEA6001935B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 472B9A611856DEA6001935B2 /* InfoPlist.strings */; };
 		472B9A661856DEA6001935B2 /* WhereAmITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472B9A651856DEA6001935B2 /* WhereAmITests.m */; };
+		472B9A701856E55D001935B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472B9A6F1856E55D001935B2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		472B9A621856DEA6001935B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		472B9A641856DEA6001935B2 /* WhereAmITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereAmITests.h; sourceTree = "<group>"; };
 		472B9A651856DEA6001935B2 /* WhereAmITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereAmITests.m; sourceTree = "<group>"; };
+		472B9A6F1856E55D001935B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472B9A701856E55D001935B2 /* CoreLocation.framework in Frameworks */,
 				472B9A351856DEA6001935B2 /* UIKit.framework in Frameworks */,
 				472B9A371856DEA6001935B2 /* Foundation.framework in Frameworks */,
 				472B9A391856DEA6001935B2 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		472B9A331856DEA6001935B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				472B9A6F1856E55D001935B2 /* CoreLocation.framework */,
 				472B9A341856DEA6001935B2 /* UIKit.framework */,
 				472B9A361856DEA6001935B2 /* Foundation.framework */,
 				472B9A381856DEA6001935B2 /* CoreGraphics.framework */,
